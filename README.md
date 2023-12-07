@@ -13,7 +13,7 @@ directing them to the relevant microservices for seamless operation.
 ## Services
 
 In this project, we will embrace a microservices-based architecture characterized by breaking down an application into small, independent services. At the core of this structure are client microservices, autonomous entities that interact to deliver complete functionality. The API Gateway serves as a centralized entry point, streamlining request management by directing traffic to the relevant microservices. The Eureka discovery server plays a crucial role by enabling each microservice to dynamically register, thus forming a decentralized directory of available services.
-![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/c3dd50a2-2077-410c-8d94-ed1eccf1e2ec)
+![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/7d845883-bd9a-48a5-81e6-d124bfd4d36c)
 ### Client service
 The client service operates on port 8088, and its application name is configured with the following settings
 : server.port=8088 and spring.application.name=SERVICE-CLIENT. Additionally, the associated database is named "databaseclients."
