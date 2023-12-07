@@ -44,12 +44,14 @@ it's provide several APIS related to creating and retrieving all cars informatio
 | POST   | /voitures        | Create new car                                 |
 | GET    | /voitures        | Get All cars informations                      | 
 | GET    | /voitures/{Id}   | Get car with id                                |
+| GET    |/voitures/client/{Id}| Get cars list of a client
 
 
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/a2b2d34a-e39c-4cbe-982b-31602cee52ec)
 
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/580b846b-5eff-4e17-9182-4979a4c0a697)
 
+![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/dd67870d-18cc-4a09-b1d0-b271acff4ee4)
 
 #### Notes
 * Each microservice has it's own database and there is no way to access the database directly from other services.
