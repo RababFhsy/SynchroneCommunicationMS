@@ -16,8 +16,6 @@ In this project, we will embrace a microservices-based architecture characterize
 
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/d5a7dc34-ad7f-4077-93e6-353d491962d8)
 
-
-
 ### Client service
 The client service operates on port 8088, and its application name is configured with the following settings
 : server.port=8088 and spring.application.name=SERVICE-CLIENT. Additionally, the associated database is named "databaseclients."
@@ -63,9 +61,7 @@ since it provides a simplify HTTP layer service called Feign (discussed later).
 ## Infrastructure
 Spring Cloud is a really good web framework that we can use for building a microservice infrastructure since it provides 
 broad supporting tools such as Load Balancer, Service registry, Monitoring, and Configuration.
-
 ![Infrastructure plan](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*43NgBoAW6h-vZTgyknM8xw.png)
-
 ### Database
 
 I use MySQL for persistent data storage for several services in this application. 
@@ -110,8 +106,6 @@ That means all requests starting with `/SERVICE-CLIENT`  following by '/clients'
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/f1fa202b-764c-45de-a567-d9f7bd811d21)
 
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/25b49a8d-00f4-4734-80f2-19a1e2429b88)
-
-
 
 ### Service Discovery *
 Another commonly known architecture pattern is Service discovery. It allows automatic detection of network locations for service instances, which could have dynamically assigned addresses because of auto-scaling, failures and upgrades.
