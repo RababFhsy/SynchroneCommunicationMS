@@ -34,7 +34,7 @@ it's provide several APIS related to creating and retrieving all client informat
 
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/d8d34d30-694c-4c8f-97f0-3e98649ed60e)
 
-### car service
+### Car service
 The client service operates on port 8089, and its application name is configured with the following settings
 : server.port=8089 and spring.application.name=SERVICE-VOITURE. Additionally, the associated database is named "databasevoitures."
 it's provide several APIS related to creating and retrieving all cars information:
@@ -84,7 +84,7 @@ spring.jpa.hibernate.ddl-auto=update
 
 
 
-### API Gateway *
+### API Gateway*
 
 As you can see, there are two core services, which expose external API to client. In a real-world systems, this number can grow very quickly as well as whole system complexity. Actualy, hundreds of services might be involved in rendering one complex webpage. 
 
