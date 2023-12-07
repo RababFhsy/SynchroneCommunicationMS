@@ -67,7 +67,7 @@ broad supporting tools such as Load Balancer, Service registry, Monitoring, and 
 I use MySQL for persistent data storage for several services in this application. 
 
 To use MYSQL daatabse in  my Spring application, simply define the necessary configurations in application.properties file in both of services client and car service.
-
+```
 Car Service:
 spring.datasource.url=jdbc:mysql://localhost:3306/databasevoitures
 spring.datasource.username=root
