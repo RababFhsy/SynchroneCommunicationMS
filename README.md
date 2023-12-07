@@ -14,7 +14,8 @@ directing them to the relevant microservices for seamless operation.
 
 In this project, we will embrace a microservices-based architecture characterized by breaking down an application into small, independent services. At the core of this structure are client microservices, autonomous entities that interact to deliver complete functionality. The API Gateway serves as a centralized entry point, streamlining request management by directing traffic to the relevant microservices. The Eureka discovery server plays a crucial role by enabling each microservice to dynamically register, thus forming a decentralized directory of available services.
 
-![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/97c2a46b-01b9-41fb-8263-8bcf01025612)
+![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/d5a7dc34-ad7f-4077-93e6-353d491962d8)
+
 
 
 ### Client service
@@ -32,6 +33,7 @@ it's provide several APIS related to creating and retrieving all client informat
 
 
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/a9f0becd-5eb5-4273-ae65-9290e1297124)
+
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/d8d34d30-694c-4c8f-97f0-3e98649ed60e)
 
 ### car service
@@ -47,6 +49,7 @@ it's provide several APIS related to creating and retrieving all cars informatio
 
 
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/a2b2d34a-e39c-4cbe-982b-31602cee52ec)
+
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/580b846b-5eff-4e17-9182-4979a4c0a697)
 
 
@@ -105,6 +108,7 @@ Usually a much better approach is to use API Gateway. It is a single entry point
 That means all requests starting with `/SERVICE-CLIENT`  following by '/clients' in client service or  starting by '/SERVICE-VOITURE' by following `/voitures`  will be forwarded to car service. There is no hardcoded address, as you can see.
 
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/f1fa202b-764c-45de-a567-d9f7bd811d21)
+
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/25b49a8d-00f4-4734-80f2-19a1e2429b88)
 
 
@@ -119,12 +123,15 @@ With Spring Boot, you can easily build Eureka Registry with `spring-cloud-starte
 Now, on application startup, it will register with Eureka Server and provide meta-data, such as host and port, health indicator URL, home page etc. Eureka receives heartbeat messages from each instance belonging to a service. If the heartbeat fails over a configurable timetable, the instance will be removed from the registry.
 
 Also, Eureka provides a simple interface, where you can track running services and number of available instances: `http://localhost:8761`
+
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/f10a928f-637b-4501-a050-455a5e7a1d0f)
 
 
 #### Feign
 To exemplify, let's take the car service as a case in point, demonstrating how Feign can be efficiently employed to engage with client microservices and external APIs. This integration streamlines the communication process, allowing us to effortlessly retrieve information about clients from other service.
+
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/3ac18abb-d51e-45bf-9254-cb4161668635)
+
 
 
 ``` java
