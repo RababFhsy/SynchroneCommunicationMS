@@ -62,7 +62,7 @@ since it provides a simplify HTTP layer service called Feign (discussed later).
 Spring Cloud is a really good web framework that we can use for building a microservice infrastructure since it provides 
 broad supporting tools such as Load Balancer, Service registry, Monitoring, and Configuration.
 ![Infrastructure plan](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*43NgBoAW6h-vZTgyknM8xw.png)
-### Database
+### Databases
 
 I use MySQL for persistent data storage for several services in this application. 
 
@@ -75,6 +75,7 @@ spring.datasource.password=
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.hibernate.ddl-auto=update
 ```
+
 Client Service:
 spring.datasource.url=jdbc:mysql://localhost:3306/databaseclients
 spring.datasource.username=root
