@@ -102,7 +102,7 @@ Usually a much better approach is to use API Gateway. It is a single entry point
 
 ```
 
-That means all requests starting with `/SERVICE-CLIENT`  following by '/clients' in client service or  starting by '/SERVICE-VOITURE' by following `/voitures`  will be forwarded to car service. There is no hardcoded address, as you can see.
+That means all requests starting with `/SERVICE-CLIENT`  following by `/clients`  in client service or  starting by '/SERVICE-VOITURE' by following `/voitures`  will be forwarded to car service. There is no hardcoded address, as you can see.
 
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/f1fa202b-764c-45de-a567-d9f7bd811d21)
 
