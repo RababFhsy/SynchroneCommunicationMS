@@ -13,7 +13,9 @@ directing them to the relevant microservices for seamless operation.
 ## Services
 
 In this project, we will embrace a microservices-based architecture characterized by breaking down an application into small, independent services. At the core of this structure are client microservices, autonomous entities that interact to deliver complete functionality. The API Gateway serves as a centralized entry point, streamlining request management by directing traffic to the relevant microservices. The Eureka discovery server plays a crucial role by enabling each microservice to dynamically register, thus forming a decentralized directory of available services.
-![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/bd88361f-aa47-4b92-965d-83d68a0880c0)
+
+![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/97c2a46b-01b9-41fb-8263-8bcf01025612)
+
 
 ### Client service
 The client service operates on port 8088, and its application name is configured with the following settings
@@ -27,6 +29,8 @@ it's provide several APIS related to creating and retrieving all client informat
 | GET    | /clients/{id}     | get client by id                              |
 | PUT    |/clients/{id}      | modify a client by id                         |
 |DELETE  |/clients/{id}      |  delete a client by id                        |
+
+
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/a9f0becd-5eb5-4273-ae65-9290e1297124)
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/d8d34d30-694c-4c8f-97f0-3e98649ed60e)
 
@@ -40,6 +44,8 @@ it's provide several APIS related to creating and retrieving all cars informatio
 | POST   | /voitures        | Create new car                                 |
 | GET    | /voitures        | Get All cars informations                      | 
 | GET    | /voitures/{Id}   | Get car with id                                |
+
+
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/a2b2d34a-e39c-4cbe-982b-31602cee52ec)
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/580b846b-5eff-4e17-9182-4979a4c0a697)
 
@@ -97,6 +103,7 @@ Usually a much better approach is to use API Gateway. It is a single entry point
 ```
 
 That means all requests starting with `/SERVICE-CLIENT`  following by '/clients' in client service or  starting by '/SERVICE-VOITURE' by following `/voitures`  will be forwarded to car service. There is no hardcoded address, as you can see.
+
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/f1fa202b-764c-45de-a567-d9f7bd811d21)
 ![image](https://github.com/RababFhsy/SynchroneCommunicationMS/assets/101474591/25b49a8d-00f4-4734-80f2-19a1e2429b88)
 
