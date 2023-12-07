@@ -10,8 +10,8 @@ import java.util.List;
 
 public interface VoitureRepository extends JpaRepository<Voiture, Long> {
 
-/*    @Query("SELECT v FROM Voiture v WHERE v.client.id = :clientId")
-    List<Voiture> findByClientId(@Param("clientId") Long clientId);*/
+   @Query("SELECT v FROM Voiture v WHERE v.id_client = :clientId")
+    List<Voiture> findByClientId(@Param("clientId") Long clientId);
 
 
 }

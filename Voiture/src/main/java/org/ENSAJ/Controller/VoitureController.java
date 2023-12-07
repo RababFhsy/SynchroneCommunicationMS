@@ -28,10 +28,10 @@ public class VoitureController {
         return voitureRepository.findById(Id).orElseThrow(() -> new Exception("Voiture Introuvable"));
     }
 
-    /*@GetMapping("/voitures/client/{Id}")
+    @GetMapping("/voitures/client/{Id}")
     public List<Voiture> chercherVoitureParClient(@PathVariable Long Id){
         return voitureRepository.findByClientId(Id);
-    }*/
+    }
 
     @PostMapping("/voitures")
     public Voiture enregistrerUneVoiture(@RequestBody Voiture voiture){
