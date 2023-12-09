@@ -1,27 +1,29 @@
 package org.ENSAJ.Model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.ENSAJ.Client;
-
 
 import javax.persistence.Entity;
 import javax.persistence.*;
 
 @Entity
-@Data @AllArgsConstructor @NoArgsConstructor
+@Table(name = "voiture")
 public class Voiture {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String matricule;
+
+    @Column(name = "id_client")
+    private Long idClient;
+
+    @Column(name = "marque")
     private String marque;
+
+    @Column(name = "matricule")
+    private String matricule;
+
+    @Column(name = "model")
     private String model;
-    private Long id_client;
-
-
-
-    public Voiture(long l, String toyota, String s, String corolla, Client c2) {
+    
+    public Voiture(long l, String toyota, String s, String corolla, Long c2) {
     }
 }

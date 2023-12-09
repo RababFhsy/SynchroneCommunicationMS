@@ -1,0 +1,76 @@
+version: '3'
+
+services:
+  eureka-server:
+    container_name: eureka-server
+    restart: always
+    ports:
+      - "8761:8761"
+    image: eurekalast:0.1
+    networks:
+      - app-network
+
+  gateway-server:
+    container_name: gateway_server
+    restart: always
+    ports:
+      - "8888:8888"
+    image: rfahssi/gateway:0.1
+    environment:
+      - EUREKA_SERVER=eureka-server
+    networks:
+      - app-network
+
+  service_client:
+    container_name: service_client
+    restart: always
+    ports:
+      - "8088:8088"
+    image: rfahssi/clients:0.1
+    environment:
+      - EUREKA_SERVER=eureka-server
+      - MYSQL_HOST=mysql2
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_PORT=3306
+    depends_on:
+      - eureka-server
+      - mysql2
+    networks:
+      - app-network
+
+  service_voiture:
+    container_name: carsrabab
+    restart: always
+    ports:
+      - "8089:8089"
+    image: voiturerabab:0.1
+    environment:
+      - EUREKA_SERVER=eureka-server
+      - MYSQL_HOST=mysql2
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_PORT=3306
+    depends_on:
+      - eureka-server
+      - mysql2
+    networks:
+      - app-network
+
+  mysql2:
+    container_name: mysql2
+    image: mysql:latest
+    ports: 
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: databaseMs
+      MYSQL_ROOT_PASSWORD: root
+    networks:
+      - app-network
+
+volumes:
+  mysql:
+
+networks:
+  app-network:
+    driver: bridge
